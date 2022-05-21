@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "c49c354f-25b4-4ed8-9b49-7b2c6de58322",
+		"name": "Contoh Postman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Example",
+			"item": [
+				{
+					"name": "Get Example",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{url}}/{{endpoint}}/blueprint/get_example",
+							"protocol": "https",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{endpoint}}",
+								"blueprint",
+								"get_example"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "10",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						},
+						"description": "### Description:\n\nThis is Get Example API\n\n* * *\n\n#### Hak Akses:\n\n*   All\n    \n\n* * *\n\n### Note:\n\n*   Jika akses untuk halaman utama (halaman yang akan diakses oleh pengguna) maka gunakan parameter is_aktif=1 supaya data yang tampil hanya data yang aktif\n    \n\n* * *\n\n### Request Header :\n\n*   NONE\n    \n\n* * *\n\n### Request Parameter:\n\n| **Key** | **Status** | **Description** |\n| --- | --- | --- |\n| limit | Optional | \\-1 : No Limit  <br>Minimum : 1  <br>Default : 10 |\n| page | Optional | Default : 1 |\n\n* * *"
+					},
+					"response": []
+				},
+				{
+					"name": "Get With JWT Example",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{url}}/{{endpoint}}/blueprint/get_with_jwt_example",
+							"protocol": "https",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{endpoint}}",
+								"blueprint",
+								"get_with_jwt_example"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						},
+						"description": "### Description:\n\nThis is Get Example API\n\n*   **Who Can Access?**\n    *   All\n\n* * *\n\n### Request Header :\n| **Key** | **Status** | **Description** |\n| --- | --- | --- |\n| Authorization | Mandatory | JWT {*token}*  <br>Tanpa kurung kurawal |\n    \n* * *\n\n### Request Parameter:\n\n| **Key** | **Status** | **Description** |\n| --- | --- | --- |\n| Parameter1 | Optional | This is Parameter 1 |\n\n* * *\n\n### File URL:\n\n*   https://{{url}}/{{endpoint}}/blueprint/media/file_name"
+					},
+					"response": []
+				},
+				{
+					"name": "Insert Example",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{url}}/{{endpoint}}/blueprint/insert_example",
+							"protocol": "https",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{endpoint}}",
+								"blueprint",
+								"insert_example"
+							]
+						},
+						"description": "### Description:\n\nAPI Insert Data\n\n* * *\n\n#### Hak Akses :\n\n*   All\n    \n\n* * *\n\n### Request Header :\n\n| **Key** | **Status** | **Description** |\n| --- | --- | --- |\n| Authorization | Mandatory | JWT {*token}*  <br>Tanpa kurung kurawal |\n\n* * *\n\n### Request Body (JSON Format):\n\n| **Key** | **Status** | **Description** |\n| --- | --- | --- |\n| Parameter1 | Mandatory | This is Parameter 1 |\n\n* * *"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Example",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{url}}/{{endpoint}}/blueprint/update_example",
+							"protocol": "https",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{endpoint}}",
+								"blueprint",
+								"update_example"
+							]
+						},
+						"description": "### Description:\n\nThis is Update Example API\n\n* * *\n\n#### Hak Akses:\n\n*   All\n    \n\n* * *\n\n### Request Header :\n\n| **Key** | **Status** | **Description** |\n| --- | --- | --- |\n| Authorization | Mandatory | JWT {*token}*  <br>Tanpa kurung kurawal |\n\n* * *\n\n### Request Body (JSON Format):\n\n| **Key** | **Status** | **Description** |\n| --- | --- | --- |\n| Parameter1 | Mandatory | This is Parameter 1 |\n\n* * *"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "JWT {{token}}",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "Authorization",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
